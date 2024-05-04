@@ -13,6 +13,10 @@
 		67370B8E2BE594BA00F07D0D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 67370B8D2BE594BA00F07D0D /* Base */; };
 		67370B902BE594BB00F07D0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67370B8F2BE594BB00F07D0D /* Assets.xcassets */; };
 		67370B932BE594BB00F07D0D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 67370B922BE594BB00F07D0D /* Base */; };
+		67370B9B2BE5A0FE00F07D0D /* ToyStoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67370B9A2BE5A0FE00F07D0D /* ToyStoreTableViewController.swift */; };
+		67370B9D2BE5A2B400F07D0D /* ToyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67370B9C2BE5A2B400F07D0D /* ToyItem.swift */; };
+		676347102BE674ED0001B70D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6763470F2BE674ED0001B70D /* GoogleService-Info.plist */; };
+		676347132BE6752D0001B70D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 676347122BE6752D0001B70D /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		67370B8F2BE594BB00F07D0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67370B922BE594BB00F07D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67370B942BE594BB00F07D0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67370B9A2BE5A0FE00F07D0D /* ToyStoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyStoreTableViewController.swift; sourceTree = "<group>"; };
+		67370B9C2BE5A2B400F07D0D /* ToyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyItem.swift; sourceTree = "<group>"; };
+		6763470F2BE674ED0001B70D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				676347132BE6752D0001B70D /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,10 +67,13 @@
 				67370B862BE594BA00F07D0D /* AppDelegate.swift */,
 				67370B882BE594BA00F07D0D /* SceneDelegate.swift */,
 				67370B8A2BE594BA00F07D0D /* ViewController.swift */,
+				67370B9A2BE5A0FE00F07D0D /* ToyStoreTableViewController.swift */,
+				67370B9C2BE5A2B400F07D0D /* ToyItem.swift */,
 				67370B8C2BE594BA00F07D0D /* Main.storyboard */,
-				67370B8F2BE594BB00F07D0D /* Assets.xcassets */,
 				67370B912BE594BB00F07D0D /* LaunchScreen.storyboard */,
+				67370B8F2BE594BB00F07D0D /* Assets.xcassets */,
 				67370B942BE594BB00F07D0D /* Info.plist */,
+				6763470F2BE674ED0001B70D /* GoogleService-Info.plist */,
 			);
 			path = ToyStore;
 			sourceTree = "<group>";
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = ToyStore;
+			packageProductDependencies = (
+				676347122BE6752D0001B70D /* FirebaseFirestore */,
+			);
 			productName = ToyStore;
 			productReference = 67370B832BE594BA00F07D0D /* ToyStore.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 67370B7A2BE594BA00F07D0D;
+			packageReferences = (
+				676347112BE6752D0001B70D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 67370B842BE594BA00F07D0D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67370B902BE594BB00F07D0D /* Assets.xcassets in Resources */,
+				676347102BE674ED0001B70D /* GoogleService-Info.plist in Resources */,
 				67370B932BE594BB00F07D0D /* Base in Resources */,
 				67370B8E2BE594BA00F07D0D /* Base in Resources */,
 			);
@@ -138,6 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67370B9D2BE5A2B400F07D0D /* ToyItem.swift in Sources */,
+				67370B9B2BE5A0FE00F07D0D /* ToyStoreTableViewController.swift in Sources */,
 				67370B8B2BE594BA00F07D0D /* ViewController.swift in Sources */,
 				67370B872BE594BA00F07D0D /* AppDelegate.swift in Sources */,
 				67370B892BE594BA00F07D0D /* SceneDelegate.swift in Sources */,
@@ -361,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		676347112BE6752D0001B70D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		676347122BE6752D0001B70D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 676347112BE6752D0001B70D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 67370B7B2BE594BA00F07D0D /* Project object */;
 }
